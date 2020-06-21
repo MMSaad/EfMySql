@@ -10,6 +10,8 @@ namespace EfMySql
 
         public DbSet<Customer> Customers { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL("server=localhost;database=demo;user=root;password=P@ssw0rd");
